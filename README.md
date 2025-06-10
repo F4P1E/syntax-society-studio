@@ -1,8 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Syntax Society Studio
 
-## Getting Started
+Welcome to the Syntax Society Studio main website repository!  
+This project is built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and enhanced with [Magic UI](https://magicui.design) and [shadcn/ui](https://ui.shadcn.com) for a modern, interactive studio experience.
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +25,61 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- [Next.js 14+](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [shadcn/ui](https://ui.shadcn.com)
+- [Magic UI](https://magicui.design)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Sanity.io](https://www.sanity.io/) (for CMS/content, optional)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/                # Next.js app directory (pages, routes, layouts)
+components/         # Reusable UI and feature components
+public/             # Static assets (images, icons, etc.)
+styles/             # Global and modular styles
+lib/                # Utilities and API clients
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌟 Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Modern, animated landing page
+- Services, Portfolio, About, and Contact pages
+- Professional UI with interactive cards and effects
+- Easy to extend and customize
+
+---
+
+## 📦 Deployment
+
+Deploy easily on [Vercel](https://vercel.com/) or your preferred platform.
+
+---
+
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome!  
+For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+[MIT](LICENSE)
+
+---
+
+Made with ❤️ by the Syntax Society Studio team.
