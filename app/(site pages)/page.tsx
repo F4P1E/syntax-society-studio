@@ -20,52 +20,51 @@ export default function HomePage() {
       </div>
 
       {/* Header */}
-<header className="relative z-10 w-full py-6 px-6 flex items-center justify-between max-w-7xl mx-auto">
-  <Link href="/" className="flex items-center gap-3" aria-label="Home">
-    <Image
-      src="/SyntaxSociety.svg"
-      alt="Syntax Society Studio Logo"
-      width={60}
-      height={60}
-      priority
-      className="dark:invert"
-    />
-    <span className="text-2xl font-extrabold tracking-tight hidden sm:inline">
-      Syntax Society Studio
-    </span>
-  </Link>
-
-  {/* Desktop Navigation with Flip Animation */}
-  <nav className="hidden md:flex gap-8 text-sm font-medium items-center">
-    {[
-      { href: '/services', label: 'Services' },
-      { href: '/portfolio', label: 'Portfolio' },
-      { href: '/about', label: 'About' },
-      { href: '/contact', label: 'Contact' },
-      { href: '/login', label: 'Login', isAuth: true },
-      { href: '/register', label: 'Register', isAuth: true },
-    ].map(({ href, label, isAuth }) => (
-      <div key={href} className="relative group perspective">
-        <Link
-          href={href}
-          className={`relative block preserve-3d transition-transform duration-500 group-hover:rotate-y-180 ${
-            isAuth ? 'text-violet-600' : ''
-          }`}
-        >
-          <span className="block backface-hidden">{label}</span>
-          <span className="absolute inset-0 backface-hidden rotate-y-180 text-violet-600 dark:text-violet-400">
-            {label}
+      <header className="relative z-10 w-full py-6 px-6 flex items-center justify-between max-w-7xl mx-auto">
+        <Link href="/" className="flex items-center gap-3" aria-label="Home">
+          <Image
+            src="/SyntaxSociety.svg"
+            alt="Syntax Society Studio Logo"
+            width={60}
+            height={60}
+            priority
+            className="dark:invert"
+          />
+          <span className="text-2xl font-extrabold tracking-tight hidden sm:inline">
+            Syntax Society Studio
           </span>
         </Link>
-      </div>
-    ))}
-  </nav>
 
-  {/* CTA for Mobile */}
-  <Link href="/contact" className="md:hidden block">
-    <Button size="sm" variant="secondary">Start a Project</Button>
-  </Link>
-</header>
+        {/* Desktop Navigation with Flip Animation */}
+        <nav className="hidden md:flex gap-8 text-sm font-medium items-center">
+          {[
+            { href: '/services', label: 'Services' },
+            { href: '/portfolio', label: 'Portfolio' },
+            { href: '/about', label: 'About' },
+            { href: '/contact', label: 'Contact' },
+            { href: '/login', label: 'Login', isAuth: true },
+            { href: '/register', label: 'Register', isAuth: true },
+          ].map(({ href, label, isAuth }) => (
+            <div key={href} className="relative group perspective">
+              <Link
+                href={href}
+                className={`relative block preserve-3d transition-transform duration-500 group-hover:rotate-y-180 ${isAuth ? 'text-violet-600' : ''
+                  }`}
+              >
+                <span className="block backface-hidden">{label}</span>
+                <span className="absolute inset-0 backface-hidden rotate-y-180 text-violet-600 dark:text-violet-400">
+                  {label}
+                </span>
+              </Link>
+            </div>
+          ))}
+        </nav>
+
+        {/* CTA for Mobile */}
+        <Link href="/contact" className="md:hidden block">
+          <Button size="sm" variant="secondary">Start a Project</Button>
+        </Link>
+      </header>
 
       {/* Hero */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden bg-black text-white">
@@ -162,45 +161,54 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 py-16 px-6 text-sm backdrop-blur-sm bg-white/40 dark:bg-gray-900/40 text-gray-600 dark:text-gray-400">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-left">
+      <footer className="relative z-10 py-16 px-6 bg-white/70 dark:bg-gray-900/70 text-gray-700 dark:text-gray-300 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-left">
+          {/* About Section */}
           <div>
-            <h4 className="text-base font-semibold mb-2 text-gray-800 dark:text-gray-100">About</h4>
-            <p className="text-sm leading-relaxed">
-              Syntax Society Studio is a creative digital agency specializing in modern design and scalable development.
+            <h4 className="text-lg font-bold mb-4 text-gray-900 dark:text-gray-100">About</h4>
+            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+              Syntax Society Studio is a creative digital agency specializing in modern design and scalable development. We bring your visions to life.
             </p>
           </div>
+
+          {/* Services Section */}
           <div>
-            <h4 className="text-base font-semibold mb-2 text-gray-800 dark:text-gray-100">Services</h4>
-            <ul className="space-y-1">
-              <li><Link href="/services" className="hover:underline">Overview</Link></li>
-              <li><Link href="/services/design" className="hover:underline">Design</Link></li>
-              <li><Link href="/services/development" className="hover:underline">Development</Link></li>
-              <li><Link href="/services/consulting" className="hover:underline">Consulting</Link></li>
+            <h4 className="text-lg font-bold mb-4 text-gray-900 dark:text-gray-100">Services</h4>
+            <ul className="space-y-2">
+              <li><Link href="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Services Overview">Overview</Link></li>
+              <li><Link href="/services/design" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Design Services">Design</Link></li>
+              <li><Link href="/services/development" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Development Services">Development</Link></li>
+              <li><Link href="/services/consulting" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Consulting Services">Consulting</Link></li>
             </ul>
           </div>
+
+          {/* Company Section */}
           <div>
-            <h4 className="text-base font-semibold mb-2 text-gray-800 dark:text-gray-100">Company</h4>
-            <ul className="space-y-1">
-              <li><Link href="/about" className="hover:underline">About Us</Link></li>
-              <li><Link href="/portfolio" className="hover:underline">Portfolio</Link></li>
-              <li><Link href="/blog" className="hover:underline">Blog</Link></li>
-              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+            <h4 className="text-lg font-bold mb-4 text-gray-900 dark:text-gray-100">Company</h4>
+            <ul className="space-y-2">
+              <li><Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="About Us">About Us</Link></li>
+              <li><Link href="/portfolio" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Our Portfolio">Portfolio</Link></li>
+              <li><Link href="/blog" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Our Blog">Blog</Link></li>
+              <li><Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Contact Us">Contact</Link></li>
             </ul>
           </div>
+
+          {/* Connect Section */}
           <div>
-            <h4 className="text-base font-semibold mb-2 text-gray-800 dark:text-gray-100">Connect</h4>
-            <ul className="space-y-1">
-              <li><a href="mailto:hello@syntaxsociety.com" className="hover:underline">hello@syntaxsociety.com</a></li>
-              <li><a href="https://twitter.com/syntaxsociety" className="hover:underline" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-              <li><a href="https://github.com/syntaxsociety" className="hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="" className="hover:underline" target="_blank" rel="noopener noreferrer">Discord</a></li>
-              <li><a href="/newsletter" className="hover:underline">Newsletter</a></li>
+            <h4 className="text-lg font-bold mb-4 text-gray-900 dark:text-gray-100">Connect</h4>
+            <ul className="space-y-2">
+              <li><a href="mailto:hello@syntaxsociety.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Email us at hello@syntaxsociety.com">hello@syntaxsociety.com</a></li>
+              <li><a href="https://twitter.com/syntaxsociety" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">Twitter</a></li>
+              <li><a href="https://github.com/syntaxsociety" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" target="_blank" rel="noopener noreferrer" aria-label="Check out our GitHub">GitHub</a></li>
+              <li><a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord">Discord</a></li>
+              <li><Link href="/newsletter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200" aria-label="Subscribe to our Newsletter">Newsletter</Link></li>
             </ul>
           </div>
         </div>
-        <div className="mt-16 text-center text-xs text-gray-500 dark:text-gray-500">
-          &copy; {new Date().getFullYear()} Syntax Society Studio. All rights reserved.
+
+        {/* Copyright */}
+        <div className="mt-20 text-center text-sm text-gray-500 dark:text-gray-500">
+          &copy; {new Date().getFullYear()} <span className="font-semibold">Syntax Society Studio</span>. All rights reserved.
         </div>
       </footer>
     </div>
