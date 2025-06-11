@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button"; // Required for mobile CTA
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion"; 
 
 const services = [
   {
@@ -151,22 +154,27 @@ export default function ServicesPage() {
 
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {services.map(({ href, title, description, details, color }) => (
-              <Link
+              <motion.div
                 key={href}
-                href={href}
-                className="block rounded-2xl bg-gray-900 hover:ring-2 hover:ring-offset-2 hover:ring-white/20 transition p-6 shadow-md"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <div className={`text-lg font-bold text-${color}`}>{title}</div>
-                <p className="mt-2 text-gray-300 text-sm leading-relaxed">{description}</p>
-                <ul className="mt-4 list-disc list-inside text-gray-400 text-sm space-y-1">
-                  {details.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-                <div className="mt-6 flex items-center text-sm font-medium text-white/80 group-hover:text-white">
-                  Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                </div>
-              </Link>
+                <Link
+                  href={href}
+                  className="block rounded-2xl bg-gray-900 hover:ring-2 hover:ring-offset-2 hover:ring-white/20 transition p-6 shadow-md"
+                >
+                  <div className={`text-lg font-bold text-${color}`}>{title}</div>
+                  <p className="mt-2 text-gray-300 text-sm leading-relaxed">{description}</p>
+                  <ul className="mt-4 list-disc list-inside text-gray-400 text-sm space-y-1">
+                    {details.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 flex items-center text-sm font-medium text-white/80 group-hover:text-white">
+                    Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
 
