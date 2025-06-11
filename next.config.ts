@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
+// next.config.js
 
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  images: {
+    domains: ['i.pravatar.cc'],
+  },
 };
-
-export default nextConfig;

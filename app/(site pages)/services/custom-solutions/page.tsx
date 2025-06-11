@@ -51,7 +51,7 @@ export default function CustomSolutionsPage() {
           </motion.h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Get tailored web, software, and design services built specifically for your needs —
-            whether you're a startup, enterprise, or creator.
+            whether you are a startup, enterprise, or creator.
           </p>
         </section>
 

@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       tags,
       uploadedBy: {
         _type: 'reference',
-        _ref: session.user.id,
+        _ref: session.user.email || '', // Use email as a unique identifier if id is not present
       },
       uploadDate: new Date().toISOString(),
     };
@@ -32,6 +32,7 @@ export async function POST(req: Request) {
     const result = await client.create(doc);
     return NextResponse.json({ success: true, result });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: 'Failed to upload' }, { status: 500 });
   }
 }

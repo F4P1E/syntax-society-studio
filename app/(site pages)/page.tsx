@@ -69,10 +69,7 @@ export default function HomePage() {
         <AnimatedGridPattern
           className="absolute inset-0 -z-10 h-full w-full"
           numSquares={15}
-          patternSize={24}
           speed={2}
-          fade
-          squareClassName="fill-white/10"
         />
 
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-tight text-blue-400 drop-shadow-xl">
@@ -86,7 +83,6 @@ export default function HomePage() {
             See Our Work
           </InteractiveHoverButton>
           <InteractiveHoverButton
-            variant="outline"
             className="px-8 py-4 text-lg border-white text-black hover:bg-white hover:text-black"
           >
             Let’s Talk

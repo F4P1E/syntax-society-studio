@@ -109,6 +109,7 @@ export default function CollaborationPage() {
                 value={form.name}
                 onChange={handleChange}
                 required
+                placeholder="Enter your name"
                 className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
               />
             </div>
@@ -120,6 +121,8 @@ export default function CollaborationPage() {
                 value={form.email}
                 onChange={handleChange}
                 required
+                placeholder="Enter your email"
+                title="Email"
                 className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
               />
             </div>
@@ -130,6 +133,8 @@ export default function CollaborationPage() {
                 value={form.message}
                 onChange={handleChange}
                 required
+                placeholder="Enter your message"
+                title="Message"
                 className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
                 rows={5}
               />
