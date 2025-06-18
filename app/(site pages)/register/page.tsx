@@ -53,7 +53,7 @@ export default function RegisterPage() {
               Sign up to <span className="text-violet-600">Syntax Society</span>
             </h1>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-              Join our creative collective — it's fast, free, and fun.
+              Join our creative collective — it&apos;s fast, free, and fun.
             </p>
           </div>
 
