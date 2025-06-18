@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 // Make sure the following file exists: /lib/sanity.server.ts and exports 'client'
 import { client } from '@/sanity/lib/client'; // configure this separately
 import { getServerSession } from 'next-auth';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'; // adjust to your project
+import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions'; // adjust to your project
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
