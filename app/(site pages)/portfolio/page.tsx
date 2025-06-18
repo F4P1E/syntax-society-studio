@@ -29,7 +29,8 @@ const projects = [
   },
 ];
 
-export default function PortfolioPage({ isStudio = false }) {
+export default function PortfolioPage() {
+  const isStudio = false; // or true, based on your logic
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-100 to-white dark:from-gray-950 dark:to-gray-900 text-gray-900 dark:text-gray-100">
       {/* Navigation Bar */}
