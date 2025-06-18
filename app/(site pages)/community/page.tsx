@@ -11,7 +11,7 @@ export default function CommunityPage() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-white hover:text-violet-400 transition">Syntax Society Studio</Link>
           <div className="space-x-6 text-sm">
-            <Link href="/featured" className="hover:text-violet-300 transition">Featured</Link>
+            <Link href="/services/featured" className="hover:text-violet-300 transition">Featured</Link>
             <Link href="/blog" className="hover:text-violet-300 transition">Blog</Link>
             <Link href="/community" className="hover:text-violet-300 transition">Community</Link>
             <Link href="/contact" className="hover:text-violet-300 transition">Contact</Link>
